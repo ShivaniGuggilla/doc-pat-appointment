@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #fdf6f0;
+    color: #1e1e2f;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(138, 43, 226, 0.3);
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+    color: #5a189a;
+  }
+
+  input, textarea, button, select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    background-color: #f0e7ff;
+    color: #1e1e2f;
+    font-size: 16px;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    background-color: #e5dbff;
+    border: 1px solid #7b2cbf;
+  }
+
+  button {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background-color: #6366f1;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+  }
+
+  th {
+    background-color: #ffe0f0;
+    color: #5a189a;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+
+  .tabs button {
+    padding: 12px 20px;
+    background-color: #f0e7ff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #1e1e2f;
+    cursor: pointer;
+  }
+
+  .tabs button:hover {
+    background-color: #ffe0f0;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }

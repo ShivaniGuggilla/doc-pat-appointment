@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Operation Scheduler</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Operation Scheduler</h1>
+    <div class="tabs">
+      <button onclick="showTab('admin')">Admin Panel</button>
+      <button onclick="showTab('user')">User Panel</button>
+    </div>
+    <div id="admin" class="hidden">
+      <h2>Admin Login</h2>
+      <form id="adminLogin">
+        <input type="text" placeholder="Admin Username" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+
+      <h3>Manage Doctor Details</h3>
+      <input type="text" id="doctorName" placeholder="Doctor Name" />
+      <input type="text" id="specialization" placeholder="Specialization" />
+      <button onclick="addDoctor()">Add Doctor</button>
+      <ul id="doctorList"></ul>
+
+      <h3>Manage Patient Details</h3>
+      <input type="text" id="patientName" placeholder="Patient Name" />
+      <input type="text" id="patientIssue" placeholder="Surgical Issue" />
+      <button onclick="addPatient()">Add Patient</button>
+      <ul id="patientList"></ul>
+
+      <h3>Post Operation Schedule Details</h3>
+      <form id="surgeryForm">
+        <input type="text" id="otId" placeholder="OT ID" required />
+        <input type="datetime-local" id="dateTime" required />
+        <input type="text" id="surgeryType" placeholder="Surgery Type" required />
+        <input type="text" id="anesthesia" placeholder="Anesthesia Type" required />
+        <input type="text" id="anesthesiologist" placeholder="Anesthesiologist Name" required />
+        <input type="text" id="surgeon" placeholder="Surgeon Name" required />
+        <input type="text" id="nurses" placeholder="Nurses Involved" />
+        <textarea id="materials" placeholder="Required Materials"></textarea>
+        <textarea id="remarks" placeholder="Doctor Remarks"></textarea>
+        <button type="submit">Schedule Surgery</button>
+      </form>
+    </div>
+
+    <div id="user" class="hidden">
+      <h2>User Account</h2>
+      <form id="userRegister">
+        <input type="text" placeholder="New Username" required />
+        <input type="password" placeholder="New Password" required />
+        <button type="submit">Register</button>
+      </form>
+
+      <form id="userLogin">
+        <input type="text" placeholder="Username" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Login</button>
+      </form>
+
+      <h3>Doctor Details</h3>
+      <ul id="userDoctorList"></ul>
+
+      <h3>Surgical Information</h3>
+      <ul id="userSurgeryList"></ul>
+    </div>
+
+    <h2>Scheduled Surgeries</h2>
+    <table id="surgeryTable">
+      <thead>
+        <tr>
+          <th>OT ID</th>
+          <th>Date & Time</th>
+          <th>Surgery Type</th>
+          <th>Anesthesia</th>
+          <th>Surgeon</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
